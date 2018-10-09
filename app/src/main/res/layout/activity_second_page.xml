@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondPage">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/brown"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pricing Info"
+            android:textColor="#fff"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:id="@+id/tooBarText"
+            android:drawableLeft="@drawable/ic_arrow_back_black_24dp"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_gravity="center"
+       android:layout_marginTop="20dp"
+       android:layout_marginBottom="20dp">
+
+       <Spinner
+           android:id="@+id/Guest"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"
+           android:scrollbarStyle="insideInset"
+           android:layout_height="50dp" />
+
+       <Spinner
+           android:id="@+id/Volunteer"
+           android:layout_width="wrap_content"
+           android:layout_weight="1"
+           android:layout_height="50dp" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="Number of Days"
+            android:textAllCaps="false"
+            android:textColor="@color/custom_blue"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/custom_blue"
+            android:text="Price per day"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listView"
+            android:divider="@null">
+
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>
